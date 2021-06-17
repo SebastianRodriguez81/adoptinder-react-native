@@ -19,7 +19,6 @@ export const CardHome = () => (
         que hacer algo por un animalito que necesita afecto. No te vas a arrepentir jamás!
       </Text>
     </Card>
-
   </React.Fragment>
 );
 

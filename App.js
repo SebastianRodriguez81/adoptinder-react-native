@@ -10,7 +10,9 @@ import { default as theme } from './assets/custom-theme.json'
 import { HomeScreen } from './screens/Home.js'
 import { LoginScreen } from './screens/Login.js'
 import { RegisterScreen } from './screens/Register.js'
+import { MatchearScreen } from './screens/Matchear.js'
 
+import { StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -18,8 +20,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 const Stack = createStackNavigator()
 
 
+
 export default function App() {
   return (
+    
     <NavigationContainer>
     <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
       <StatusBar style="auto" />
@@ -27,9 +31,15 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Matchear" component={MatchearScreen} />
       </Stack.Navigator>
     </ApplicationProvider>
-    </NavigationContainer>
+    </NavigationContainer>    
   )
 }
+
+const styles = StyleSheet.create({
+  
+})
+   
 

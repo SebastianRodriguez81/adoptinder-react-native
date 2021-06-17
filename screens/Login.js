@@ -5,8 +5,10 @@ import { Layout, Text, Input, Button } from '@ui-kitten/components'
 
 import { default as theme } from '../assets/custom-theme.json'
 
-  
-  export const LoginScreen = ({ navigation }) => (
+
+
+export const LoginScreen = ({ navigation }) => (
+    
     <Layout style={styles.container}>
       <Text style={styles.header} appearance='alternative' category='h1'>Login</Text>
       <Input textStyle={ styles.input } placeholder='Nombre de Usuario' />      
@@ -26,7 +28,15 @@ import { default as theme } from '../assets/custom-theme.json'
       >
         <Text style={styles.buttonText} appearance='alternative'>Registrarse</Text>
       </Button>      
+      <Button 
+        size='giant'
+        onPress={() => navigation.navigate('Matchear')}
+        style={styles.buttonMatch}
+      >
+        <Text style={styles.buttonText} appearance='alternative'>Matchear</Text>
+      </Button>      
     </Layout> 
+    
   )
   
 
@@ -49,10 +59,15 @@ import { default as theme } from '../assets/custom-theme.json'
       backgroundColor: '#5292FA',
       borderRadius: 20,
       paddingHorizontal: 10    
+    },
+    buttonMatch: {
+      backgroundColor: theme['color-success-500'],
+      borderRadius: 20,
+      paddingHorizontal: 10    
     },  
     buttonText: {
       fontWeight: "bold",
       fontSize: 20    
-    }    
+    }      
   })
-  
+    
